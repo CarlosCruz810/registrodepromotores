@@ -3,55 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registro de Asesores</title>
+    <title>Registro de Asesores | Cancún</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-6">
-    <div class="max-w-md mx-auto bg-white p-8 rounded-xl shadow-lg border border-gray-200">
-        <h2 class="text-2xl font-bold mb-6 text-blue-900 text-center">Registro de Promotores</h2>
-        
-        <div class="space-y-4">
+<body class="bg-blue-900 min-h-screen flex items-center justify-center p-6">
+
+    <div class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl">
+        <h1 class="text-2xl font-bold text-center text-blue-900 mb-2 text-pretty">Registro de Socios</h1>
+        <p class="text-center text-gray-500 mb-8 text-sm">Gana $300 como Asesor o $100 por Referido</p>
+
+        <div class="space-y-5">
             <div>
-                <label class="block text-sm font-bold mb-1">Nombre Completo</label>
-                <input type="text" id="nombre" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu nombre">
+                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Nombre Completo</label>
+                <input type="text" id="nombre_v" class="w-full p-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 transition" placeholder="Escribe tu nombre">
             </div>
 
             <div>
-                <label class="block text-sm font-bold mb-1">WhatsApp</label>
-                <input type="tel" id="whatsapp_user" class="w-full p-3 border rounded-lg outline-none focus:ring-2 focus:ring-blue-500" placeholder="Tu número">
+                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Tu WhatsApp</label>
+                <input type="tel" id="tel_v" class="w-full p-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:ring-2 focus:ring-blue-500" placeholder="Ej: 9981234567">
             </div>
 
             <div>
-                <label class="block text-sm font-bold mb-1">Programa</label>
-                <select id="programa" class="w-full p-3 border rounded-lg bg-white">
+                <label class="block text-xs font-bold uppercase text-gray-400 mb-1">Programa de Interés</label>
+                <select id="prog_v" class="w-full p-4 bg-gray-50 border border-gray-100 rounded-xl outline-none focus:ring-2 focus:ring-blue-500 appearance-none bg-white">
                     <option>Bachillerato 22 Semanas</option>
-                    <option>Primaria/Secundaria Adultos</option>
+                    <option>Primaria y Secundaria Adultos</option>
                     <option>Inglés y Computación</option>
+                    <option>Asistente Educativo</option>
                 </select>
             </div>
 
-            <button onclick="enviarAWhatsApp()" class="w-full bg-green-600 text-white font-bold py-4 rounded-lg hover:bg-green-700 transition shadow-lg">
-                ENVIAR POR WHATSAPP
+            <button onclick="enviarWhatsAppDirecto()" class="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-xl shadow-lg transition duration-300 transform active:scale-95 flex items-center justify-center">
+                <span class="mr-2">📲</span> REGISTRARME POR WHATSAPP
             </button>
         </div>
+        
+        <p class="text-center text-[10px] text-gray-400 mt-6 italic">Se abrirá tu WhatsApp para enviarme tus datos al instante.</p>
     </div>
 
     <script>
-        function enviarAWhatsApp() {
-            const nombre = document.getElementById('nombre').value;
-            const tel = document.getElementById('whatsapp_user').value;
-            const prog = document.getElementById('programa').value;
+        function enviarWhatsAppDirecto() {
+            const n = document.getElementById('nombre_v').value;
+            const t = document.getElementById('tel_v').value;
+            const p = document.getElementById('prog_v').value;
 
-            if(!nombre || !tel) return alert("Por favor completa los datos");
+            if(!n || !t) {
+                alert("Carlos, por favor pide a tus usuarios que llenen nombre y teléfono.");
+                return;
+            }
 
-            const miNumero = "529984943352";
-            const texto = `*NUEVO REGISTRO*%0A*Nombre:* ${nombre}%0A*Tel:* ${tel}%0A*Programa:* ${prog}`;
+            // TU WHATSAPP PERSONALIZADO
+            const numeroDestino = "529984943352";
             
-            window.location.href = `https://wa.me/${miNumero}?text=${texto}`;
+            const mensajeFinal = `*¡NUEVO REGISTRO DE ASESOR!*%0A%0A` +
+                                `*Nombre:* ${n}%0A` +
+                                `*WhatsApp:* ${t}%0A` +
+                                `*Interés:* ${p}%0A%0A` +
+                                `_Hola, quiero unirme a tu equipo de ventas._`;
+
+            // Acción directa sin pasar por servidores intermedios
+            window.location.href = `https://wa.me/${9984943352}?text=${mensajeFinal}`;
         }
     </script>
+
 </body>
 </html>
-
 
 
