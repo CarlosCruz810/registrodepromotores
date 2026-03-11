@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Asesores y Promotores | Academia Élite</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 font-sans text-gray-900">
+
+    <header class="bg-blue-900 text-white py-16 px-6 text-center shadow-lg">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-tight">Únete a nuestra Red de Socios Estratégicos</h1>
+        <p class="text-xl opacity-90 max-w-2xl mx-auto">Transforma vidas promoviendo educación de alto impacto: Bachillerato en 22 semanas, Inglés, Computación y más.</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto py-12 px-6 grid md:grid-cols-2 gap-12">
+        
+        <section>
+            <h2 class="text-3xl font-bold mb-8 text-blue-900">¿Por qué ser nuestro Promotor?</h2>
+            
+            <div class="space-y-6">
+                <div class="flex items-start">
+                    <div class="bg-blue-100 p-3 rounded-lg text-blue-600 mr-4">
+                        <i class="fas fa-money-bill-wave fa-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Altas Comisiones</h3>
+                        <p class="text-gray-600">Pagos inmediatos por cada cierre en nuestros más de 7 programas académicos.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-green-100 p-3 rounded-lg text-green-600 mr-4">
+                        <i class="fas fa-bullhorn fa-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Kit de Ventas Profesional</h3>
+                        <p class="text-gray-600">Te entregamos imágenes, videos y copys listos para tus estados de WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start">
+                    <div class="bg-purple-100 p-3 rounded-lg text-purple-600 mr-4">
+                        <i class="fas fa-graduation-cap fa-lg"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Programas de Alta Demanda</h3>
+                        <p class="text-gray-600">Bachillerato en 22 semanas, Primaria/Secundaria para adultos y Asistente Educativo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-10 p-6 border-l-4 border-blue-900 bg-white shadow-sm italic text-gray-700">
+                "Buscamos líderes que quieran crecer con nosotros y cerrar ventas que cambien el futuro de sus comunidades."
+            </div>
+        </section>
+
+        <section class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+            <h2 class="text-2xl font-bold mb-6 text-center">Formulario de Registro</h2>
+            <form action="#" method="POST" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Nombre Completo</label>
+                    <input type="text" placeholder="Ej. Juan Pérez" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">WhatsApp de Contacto</label>
+                    <input type="tel" placeholder="Ej. +52 998 123 4567" class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition" required>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">Programa que más te interesa promover</label>
+                    <select class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition bg-white" required>
+                        <option value="">Selecciona una opción...</option>
+                        <option value="bachillerato">Bachillerato en 22 semanas</option>
+                        <option value="primaria-secundaria">Primaria y Secundaria para adultos</option>
+                        <option value="ingles-computacion">Inglés y Computación</option>
+                        <option value="asistente">Asistente Educativo</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold mb-1">¿Tienes experiencia previa en ventas?</label>
+                    <textarea rows="2" placeholder="Cuéntanos brevemente..." class="w-full p-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none transition"></textarea>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-900 text-white font-bold py-4 rounded-lg hover:bg-blue-800 transition duration-300 transform hover:scale-[1.02] shadow-lg">
+                    ENVIAR MI SOLICITUD
+                </button>
+                <p class="text-xs text-center text-gray-500 mt-4 italic">Al registrarte, aceptas que nos pondremos en contacto contigo vía WhatsApp.</p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="bg-gray-100 py-8 text-center text-gray-600 text-sm">
+        <p>&copy; 2026 Academia de Formación Continua. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
